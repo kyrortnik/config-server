@@ -15,6 +15,6 @@ spring:
   liquibase:
     change-log: classpath:db_changelog_master.xml
 
-eureka:
-  instance:
-    preferIpAddress: true
+# eureka:
+#   instance:
+#     preferIpAddress: true
