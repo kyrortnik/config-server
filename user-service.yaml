@@ -2,9 +2,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:sqlserver://localhost:1433/rateyourmusic-user-service
+    url: jdbc:sqlserver://localhost/rateyourmusic-user-service
     username: sa
-    password: <Qw4815162342
+    password: Qw4815162342
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     # show-sql: true
