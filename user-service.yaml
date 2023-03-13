@@ -16,8 +16,8 @@ spring:
     change-log: classpath:db_changelog_master.xml
 
 eureka:
-  instance:
-    preferIpAddress: true
+  # instance:
+  #   preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
