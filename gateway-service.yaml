@@ -29,23 +29,23 @@ spring:
           filters:
             - RewritePath=/authentication-service/(?<path>.*), /$\{path}
 
-        - id: domain-service
-          uri: lb://benefit-service
-          predicates:
-            - Path=/benefit-service/**
-          filters:
-            - RewritePath=/benefit-service/(?<path>.*), /$\{path}
-
-        - id: file-service
-          uri: lb://file-service
-          predicates:
-            - Path=/file-service/**
-          filters:
-            - RewritePath=/file-service/(?<path>.*), /$\{path}
-
-        - id: notification-service
-          uri: lb://notification-service
-          predicates:
-            - Path=/notification-service/**
-          filters:
-            - RewritePath=/notification-service/(?<path>.*), /$\{path}
+        # - id: domain-service
+        #   uri: lb://domain-service
+        #   predicates:
+        #     - Path=/domain-service/**
+        #   filters:
+        #     - RewritePath=/domain-service/(?<path>.*), /$\{path}
+        # 
+        # - id: file-service
+        #   uri: lb://file-service
+        #   predicates:
+        #     - Path=/file-service/**
+        #   filters:
+        #     - RewritePath=/file-service/(?<path>.*), /$\{path}
+        #
+        # - id: notification-service
+        #   uri: lb://notification-service
+        #   predicates:
+        #     - Path=/notification-service/**
+        #   filters:
+        #     - RewritePath=/notification-service/(?<path>.*), /$\{path}
