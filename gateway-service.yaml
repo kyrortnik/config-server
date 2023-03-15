@@ -14,7 +14,7 @@ spring:
     gateway:
       routes:
         - id: authentication-service
-          uri: lb://authentication-service/
+          uri: lb://authentication-service
           predicates:
             - Path=/authentication-service/**
           filters:
