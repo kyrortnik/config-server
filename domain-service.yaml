@@ -1,0 +1,11 @@
+server: 
+  servlet: 
+    context-path: /domain-service
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/auth-server
+          jwk-set-uri: http://localhost:8083/auth/realms/auth-server/protocol/openid-connect/certs

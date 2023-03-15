@@ -22,12 +22,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: user-service
-          uri: lb://user-service
+        - id: authentication-service
+          uri: lb://authentication-service
           predicates:
-            - Path=/user-service/**
+            - Path=/authentication-service/**
           filters:
-            - RewritePath=/user-service/(?<path>.*), /$\{path}
+            - RewritePath=/authentication-service/(?<path>.*), /$\{path}
 
         - id: domain-service
           uri: lb://benefit-service
