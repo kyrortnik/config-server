@@ -1,3 +1,8 @@
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+
 spring:
   security:
     oauth2:
@@ -15,7 +20,3 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/realms/rateyourmisic-keycloak-dev
-
-eureka:
-  instance:
-    preferIpAddress: true
