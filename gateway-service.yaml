@@ -26,7 +26,7 @@ eureka:
           predicates:
             - Path=/authentication-service/**
           filters:
-            - RewritePath=/authentication-service/(?<path>.*), /$\{path}
+            - RewritePath=/authentication-service/(?<path>.*), http://localhost:8080/realms//$\{path}
 
 management:
   endpoint:
