@@ -9,7 +9,7 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: login-app
+            client-id: authentication-service
             authorization-grant-type: authorization_code
             scope:
               - openid
