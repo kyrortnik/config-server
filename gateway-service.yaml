@@ -8,22 +8,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-# spring:
-#   cloud:
-#     gateway:
-#       routes:
-#         - id: authentication-service
-#           uri: lb://authentication-service
-#           predicates:
-#             - Path=/authentication-service/**
-#           filters:
-#             - RewritePath=/authentication-service/(?<path>.*), /$\{path}
-
   cloud:
     gateway:
       routes:
         - id: authentication-server
-          uri: http://localhost:8080/
+          uri: http://localhost:8080
           predicates:
             - Path=/authentication-service/**
           filters:
