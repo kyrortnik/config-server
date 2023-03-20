@@ -22,11 +22,12 @@ eureka:
   cloud:
     gateway:
       routes:
-        - uri: http://localhost:8080/realms/
+        - id: authentication-server
+          uri: http://localhost:8080/
           predicates:
             - Path=/authentication-service/**
           filters:
-            - RewritePath=/authentication-service/(?<path>.*), http://localhost:8080/realms//$\{path}
+            - RewritePath=/authentication-service/(?<path>.*), /$\{path}
 
 management:
   endpoint:
