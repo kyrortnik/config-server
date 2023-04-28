@@ -15,8 +15,8 @@ spring:
               - openid
         provider:
           keycloak:
-            issuer-uri: http://localhost:8080/realms/rateyourmusic-keycloak-dev
+            issuer-uri: http://keycloak:8080/realms/master
             user-name-attribute: preferred_username
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/rateyourmusic-keycloak-dev
+          issuer-uri: http://keycloak:8080/realms/master
