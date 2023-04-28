@@ -18,6 +18,12 @@ spring:
             - Path=/authentication-service/**
           filters:
             - RewritePath=/authentication-service/(?<path>.*), /$\{path}
+        - id: domain-service
+          uri: http://domain-service:8065/
+          predicates:
+            - Path=/domain-service/**
+          filters:
+            - RewritePath=/domain-service/(?<path>.*), /$\{path}
 
 management:
   endpoint:
