@@ -1,0 +1,9 @@
+eureka:
+  instance:
+    hostname: temp-service
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
