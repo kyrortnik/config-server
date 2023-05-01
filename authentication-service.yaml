@@ -16,12 +16,11 @@ spring:
         registration:
           keycloak:
             client-id: authentication-service
+            client-secret: DZe7Ga0uxblLIGwtc0GhChAAsKcM0Tlh
             authorization-grant-type: authorization_code
-            scope:
-              - openid
         provider:
           keycloak:
             issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+      # resourceserver:
+      #   jwt:
+      #     issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
