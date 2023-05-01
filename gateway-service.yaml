@@ -12,12 +12,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: authentication-service
-          uri: http://authentication-service:8088/
+        - id: domain-service
+          uri: http://domain-service:8011/
           predicates:
-            - Path=/authentication-service/**
+            - Path=/domain-service/**
           filters:
-            - RewritePath=/authentication-service/(?<path>.*), /$\{path}
+            - RewritePath=/domain-service/(?<path>.*), /$\{path}   
         # - id: authentication-service
         #   uri: http://keycloak:8080/
         #   predicates:
