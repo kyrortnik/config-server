@@ -25,13 +25,6 @@ spring:
         #   filters:
         #     - RewritePath=/authentication-service/(?<path>.*), /$\{path}
 
-        - id: temp-service
-          uri: http://temp-service:8011/
-          predicates:
-            - Path=/temp-service/**
-          filters:
-            - RewritePath=/temp-service/(?<path>.*), /$\{path}
-
 management:
   endpoint:
     gateway:

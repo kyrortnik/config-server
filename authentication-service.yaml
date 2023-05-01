@@ -20,7 +20,7 @@ spring:
             authorization-grant-type: authorization_code
         provider:
           keycloak:
-            issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+            issuer-uri: http://keycloak:8080/auth/admin/realms/rateyourmusic
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+          issuer-uri: http://keycloak:8080/auth/admin/realms/rateyourmusic
