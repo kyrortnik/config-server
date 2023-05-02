@@ -18,12 +18,12 @@ spring:
             - Path=/domain-service/**
           filters:
             - RewritePath=/domain-service/(?<path>.*), /$\{path}   
-        # - id: authentication-service
-        #   uri: http://keycloak:8080/
-        #   predicates:
-        #     - Path=/authentication-service/**
-        #   filters:
-        #     - RewritePath=/authentication-service/(?<path>.*), /$\{path}
+        - id: keycloak
+          uri: http://keycloak:8080/
+          predicates:
+            - Path=/auth/**
+          filters:
+            - RewritePath=/keycloak/auth/(?<path>.*), /$\{path}
 
 management:
   endpoint:
