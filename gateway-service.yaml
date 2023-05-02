@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/auth/**
           filters:
-            - RewritePath=/keycloak/auth/(?<path>.*), /$\{path}
+            - RewritePath=/(?<path>.*), /$\{path}
 
 management:
   endpoint:
