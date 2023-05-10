@@ -25,7 +25,7 @@ spring:
           issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
   datasource:
     url: jdbc:postgresql://postgres:5432/domain-service
-    username: root
+    username: root1
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
