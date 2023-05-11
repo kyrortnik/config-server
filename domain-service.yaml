@@ -24,8 +24,8 @@ spring:
         jwt:
           issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
   datasource:
-    url: jdbc:postgresql://postgres:5432/domain-service
-    username: root1
+    url: jdbc:postgresql://postgres:5433/domain-service_db
+    username: ds_admin
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
