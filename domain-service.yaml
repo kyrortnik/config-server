@@ -40,6 +40,5 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxRHSUZCLE1uS7mjkzP+/Sk5J0R9ZJo4qwpx7raj4pxD6cY9gb5aqzK623+xfoOoDbsERPAQ2h/akk0eru9BBEXfd3X7INspBgEn2Tg6Tu1WsW7KSyS0BiDGLbdzEU9sooevijUgI5O89PJY9qeCb9s4yF0J9bd59tNLerla77xd6yjsLLF19mMxzzKPRT13WyfPajZHI2WwBgsJC7XkAecDMC3DpRhT6fapqCjJ+K4YlIXSJ80/8rAli2ZgkyvJlNFGVs1s6mwqWzsBGW4bnr5V7vZKCuf+APBEIwkoN6x3y/04Sn6t1HSzqjjucyjI8XApXXe3NtRCrhrj0Twq6wQIDAQAB
           issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
           jwk-set-uri: http://keycloak:8080/auth/realms/rateyourmusic/protocol/openid-connect/certs
