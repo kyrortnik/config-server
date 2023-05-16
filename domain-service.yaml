@@ -23,6 +23,7 @@ eureka:
       # resourceserver:
       #   jwt:
       #     issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+spring:      
   datasource:
     url: jdbc:postgresql://domain_service_db:5432/domain_service_db
     username: ds_admin
@@ -35,7 +36,6 @@ eureka:
         format-sql: true
   liquibase:
     change-log: classpath:db_changelog_master.xml
-spring:
   security:
     oauth2:
       resourceserver:
