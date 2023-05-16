@@ -8,21 +8,21 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
 
-spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: authentication-service
-            client-secret: DZe7Ga0uxblLIGwtc0GhChAAsKcM0Tlh
-            authorization-grant-type: authorization_code
-        provider:
-          keycloak:
-            issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+# spring:
+#   security:
+#     oauth2:
+      # client:
+      #   registration:
+      #     keycloak:
+      #       client-id: authentication-service
+      #       client-secret: DZe7Ga0uxblLIGwtc0GhChAAsKcM0Tlh
+      #       authorization-grant-type: authorization_code
+      #   provider:
+      #     keycloak:
+      #       issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+      # resourceserver:
+      #   jwt:
+      #     issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
   datasource:
     url: jdbc:postgresql://domain_service_db:5432/domain_service_db
     username: ds_admin
@@ -35,10 +35,10 @@ spring:
         format-sql: true
   liquibase:
     change-log: classpath:db_changelog_master.xml
-# spring:
-#   security:
-#     oauth2:
-#       resourceserver:
-#         jwt:
-#           issuer-uri: http://localhost:8083/auth/realms/auth-server
-#           jwk-set-uri: http://localhost:8083/auth/realms/auth-server/protocol/openid-connect/certs
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+          jwk-set-uri: http://keycloak:8080/auth/realms/rateyourmusic/protocol/openid-connect/certs
