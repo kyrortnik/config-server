@@ -7,10 +7,10 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
-
-# spring:
-#   security:
-#     oauth2:
+      
+      # spring:
+      #   security:
+      #     oauth2:
       # client:
       #   registration:
       #     keycloak:
@@ -23,7 +23,7 @@ eureka:
       # resourceserver:
       #   jwt:
       #     issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
-spring:      
+spring:
   datasource:
     url: jdbc:postgresql://domain_service_db:5432/domain_service_db
     username: ds_admin
@@ -40,5 +40,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/auth/realms/rateyourmusic
+          issuer-uri: 
+          - http://keycloak:8080/auth/realms/rateyourmusic
+          - http://localhost:8080/auth/realms/rateyourmusic
           # jwk-set-uri: http://keycloak:8080/auth/realms/rateyourmusic/protocol/openid-connect/certs
